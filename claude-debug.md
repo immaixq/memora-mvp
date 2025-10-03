@@ -1,14 +1,26 @@
-Firebase Admin not initialized - missing environment variables
-prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
-Please manually install OpenSSL and try installing Prisma again.
-Failed to start server: PrismaClientInitializationError: Unable to require(`/app/node_modules/.prisma/client/libquery_engine-linux-musl.so.node`).
-The Prisma engines do not seem to be compatible with your system. Please refer to the documentation about Prisma's system requirements: https://pris.ly/d/system-requirements
-Details: Error loading shared library libssl.so.1.1: No such file or directory (needed by /app/node_modules/.prisma/client/libquery_engine-linux-musl.so.node)
-    at Object.loadLibrary (/app/node_modules/@prisma/client/runtime/library.js:111:10243)
-    at async _r.loadEngine (/app/node_modules/@prisma/client/runtime/library.js:112:448)
-    at async _r.instantiateLibrary (/app/node_modules/@prisma/client/runtime/library.js:111:12599)
-    at async _r.start (/app/node_modules/@prisma/client/runtime/library.js:112:1976)
-    at async startServer (/app/dist/index.js:82:9) {
-  clientVersion: '5.22.0',
-  errorCode: undefined
-}
+builder
+RUN apk add --no-cache openssl1.1-compat
+1s
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+ERROR: unable to select packages:
+  openssl1.1-compat (no such package):
+    required by: world[openssl1.1-compat]
+
+production
+RUN apk add --no-cache openssl1.1-compat
+1s
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+ERROR: unable to select packages:
+  openssl1.1-compat (no such package):
+    required by: world[openssl1.1-compat]
+Dockerfile:35
+-------------------
+33 |
+34 |     # Install OpenSSL and other required dependencies for Prisma runtime
+35 | >>> RUN apk add --no-cache openssl1.1-compat
+36 |
+37 |     # Create app directory
+-------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c apk add --no-cache openssl1.1-compat" did not complete successfully: exit code: 1

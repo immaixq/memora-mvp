@@ -1,17 +1,17 @@
-# Multi-stage build for backend
-FROM node:18-alpine AS builder
+# Multi-stage build for backend  
+FROM node:18-slim AS builder
 
 WORKDIR /app
 
 # Install OpenSSL and other required dependencies for Prisma
-RUN apk add --no-cache openssl1.1-compat
+RUN apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*
 
 # Copy package files
 COPY package*.json ./
 COPY prisma ./prisma/
 
-# Set Prisma engine for Alpine Linux
-ENV PRISMA_CLI_BINARY_TARGETS="linux-musl"
+# Set Prisma engine for Debian Linux
+ENV PRISMA_CLI_BINARY_TARGETS="debian-openssl-1.1.x"
 
 # Install all dependencies (including devDependencies for build)
 RUN npm ci && npm cache clean --force
@@ -29,10 +29,10 @@ RUN npm run build
 RUN npx prisma generate
 
 # Production stage
-FROM node:18-alpine AS production
+FROM node:18-slim AS production
 
 # Install OpenSSL and other required dependencies for Prisma runtime
-RUN apk add --no-cache openssl1.1-compat
+RUN apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*
 
 # Create app directory
 WORKDIR /app
