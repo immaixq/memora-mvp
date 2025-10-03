@@ -1,3 +1,4 @@
+
 # Dependencies
 node_modules/
 .pnp
@@ -102,3 +103,6 @@ frontend/build/
 .DS_Store
 Thumbs.db
 node_modules
+
+*.log
+/error_logs
