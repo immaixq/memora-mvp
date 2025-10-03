@@ -1,0 +1,728 @@
+2025-10-03T17:42:44.000000000Z [inf]  Starting Container
+2025-10-03T17:42:45.980558795Z [inf]  
+2025-10-03T17:42:45.980564058Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:45.980568999Z [inf]  > node dist/index.js
+2025-10-03T17:42:45.980573465Z [inf]  
+2025-10-03T17:42:45.980577322Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:45.980581485Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:45.980585414Z [err]      ^
+2025-10-03T17:42:45.980590005Z [err]  
+2025-10-03T17:42:45.980594487Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:45.980599143Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:45.980603729Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:45.980608142Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:45.980612621Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:45.980616303Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:45.980620758Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:45.980624352Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:45.980628403Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:45.980632993Z [err]  
+2025-10-03T17:42:45.980638198Z [err]  Node.js v18.20.8
+2025-10-03T17:42:45.980642245Z [err]  npm notice
+2025-10-03T17:42:45.980646234Z [err]  npm notice New major version of npm available! 10.8.2 -> 11.6.1
+2025-10-03T17:42:45.980652086Z [err]  npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.1
+2025-10-03T17:42:45.980656825Z [err]  npm notice To update run: npm install -g npm@11.6.1
+2025-10-03T17:42:45.980662085Z [err]  npm notice
+2025-10-03T17:42:46.606915366Z [inf]  
+2025-10-03T17:42:46.606920207Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:46.606927085Z [inf]  > node dist/index.js
+2025-10-03T17:42:46.606931882Z [inf]  
+2025-10-03T17:42:46.884808258Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:46.884815686Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:46.884820178Z [err]      ^
+2025-10-03T17:42:46.884825668Z [err]  
+2025-10-03T17:42:46.884830713Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:46.884835226Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:46.884839770Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:46.884843813Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:46.884847818Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:46.884852838Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:46.884858388Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:46.884862694Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:46.884866796Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:46.884870847Z [err]  
+2025-10-03T17:42:46.884875590Z [err]  Node.js v18.20.8
+2025-10-03T17:42:47.849519131Z [inf]  
+2025-10-03T17:42:47.849525252Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:47.849531405Z [inf]  > node dist/index.js
+2025-10-03T17:42:47.849538259Z [inf]  
+2025-10-03T17:42:48.120591296Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:48.120602379Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:48.120609188Z [err]      ^
+2025-10-03T17:42:48.120615581Z [err]  
+2025-10-03T17:42:48.120622874Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:48.120629650Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:48.120634924Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:48.120641599Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:48.120648648Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:48.120655144Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:48.120662618Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:48.120668635Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:48.120675225Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:48.120682757Z [err]  
+2025-10-03T17:42:48.120690329Z [err]  Node.js v18.20.8
+2025-10-03T17:42:49.081597482Z [inf]  
+2025-10-03T17:42:49.081607741Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:49.081615637Z [inf]  > node dist/index.js
+2025-10-03T17:42:49.081624449Z [inf]  
+2025-10-03T17:42:49.351401038Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:49.351407517Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:49.351412346Z [err]      ^
+2025-10-03T17:42:49.351416877Z [err]  
+2025-10-03T17:42:49.351421389Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:49.351426439Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:49.351431607Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:49.351438260Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:49.351442609Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:49.351446858Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:49.351451454Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:49.351456366Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:49.351460421Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:49.351464548Z [err]  
+2025-10-03T17:42:49.351469391Z [err]  Node.js v18.20.8
+2025-10-03T17:42:50.352673547Z [inf]  
+2025-10-03T17:42:50.352678135Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:50.352682771Z [inf]  > node dist/index.js
+2025-10-03T17:42:50.352687952Z [inf]  
+2025-10-03T17:42:50.638166212Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:50.638175056Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:50.638182161Z [err]      ^
+2025-10-03T17:42:50.638188510Z [err]  
+2025-10-03T17:42:50.638194125Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:50.638201408Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:50.638208754Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:50.638215101Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:50.638220518Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:50.638226372Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:50.638232652Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:50.638238351Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:50.638244691Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:50.638251751Z [err]  
+2025-10-03T17:42:50.638258285Z [err]  Node.js v18.20.8
+2025-10-03T17:42:51.637544717Z [inf]  
+2025-10-03T17:42:51.637550696Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:51.637556069Z [inf]  > node dist/index.js
+2025-10-03T17:42:51.637560492Z [inf]  
+2025-10-03T17:42:51.911140861Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:51.911148670Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:51.911153483Z [err]      ^
+2025-10-03T17:42:51.911157849Z [err]  
+2025-10-03T17:42:51.911162519Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:51.911168230Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:51.911173066Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:51.911178808Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:51.911182437Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:51.911220398Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:51.911224715Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:51.911230479Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:51.911234244Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:51.911238338Z [err]  
+2025-10-03T17:42:51.911242539Z [err]  Node.js v18.20.8
+2025-10-03T17:42:52.875501576Z [inf]  
+2025-10-03T17:42:52.875513218Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:52.875520213Z [inf]  > node dist/index.js
+2025-10-03T17:42:52.875528151Z [inf]  
+2025-10-03T17:42:53.144764324Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:53.144769799Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:53.144776368Z [err]      ^
+2025-10-03T17:42:53.144785343Z [err]  
+2025-10-03T17:42:53.144793880Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:53.144799795Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:53.144805062Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:53.144812207Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:53.144817601Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:53.144824080Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:53.144829795Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:53.144837450Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:53.144844049Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:53.144850773Z [err]  
+2025-10-03T17:42:53.144856313Z [err]  Node.js v18.20.8
+2025-10-03T17:42:54.120482926Z [inf]  
+2025-10-03T17:42:54.120492327Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:54.120499213Z [inf]  > node dist/index.js
+2025-10-03T17:42:54.120506133Z [inf]  
+2025-10-03T17:42:54.440182540Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:54.440189507Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:54.440193780Z [err]      ^
+2025-10-03T17:42:54.440198987Z [err]  
+2025-10-03T17:42:54.440206622Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:54.440211228Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:54.440231481Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:54.440236365Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:54.440240923Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:54.440245558Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:54.440249512Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:54.440253742Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:54.440257949Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:54.440262030Z [err]  
+2025-10-03T17:42:54.440267025Z [err]  Node.js v18.20.8
+2025-10-03T17:42:55.433140525Z [inf]  
+2025-10-03T17:42:55.433150401Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:55.433157515Z [inf]  > node dist/index.js
+2025-10-03T17:42:55.433166695Z [inf]  
+2025-10-03T17:42:55.711591441Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:55.711602386Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:55.711609166Z [err]      ^
+2025-10-03T17:42:55.711616406Z [err]  
+2025-10-03T17:42:55.711622415Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:55.711628276Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:55.711633806Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:55.711639722Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:55.711648149Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:55.711653667Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:55.711660193Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:55.711668535Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:55.711675549Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:55.711685182Z [err]  
+2025-10-03T17:42:55.711693099Z [err]  Node.js v18.20.8
+2025-10-03T17:42:56.753089592Z [inf]  
+2025-10-03T17:42:56.753094355Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:56.753099086Z [inf]  > node dist/index.js
+2025-10-03T17:42:56.753104674Z [inf]  
+2025-10-03T17:42:57.004330871Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:57.004339469Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:57.004344994Z [err]      ^
+2025-10-03T17:42:57.004350616Z [err]  
+2025-10-03T17:42:57.004355892Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:57.004365241Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:57.004370030Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:57.004374195Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:57.004378009Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:57.004381897Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:57.004388121Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:57.004393238Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:57.004400280Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:57.004404679Z [err]  
+2025-10-03T17:42:57.004411020Z [err]  Node.js v18.20.8
+2025-10-03T17:42:58.023510638Z [inf]  
+2025-10-03T17:42:58.023518046Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:42:58.023523237Z [inf]  > node dist/index.js
+2025-10-03T17:42:58.023528672Z [inf]  
+2025-10-03T17:42:58.278644578Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:42:58.278654889Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:42:58.278661786Z [err]      ^
+2025-10-03T17:42:58.278668521Z [err]  
+2025-10-03T17:42:58.278676536Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:42:58.278684087Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:42:58.278691616Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:42:58.278699325Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:42:58.278706741Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:42:58.278714265Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:42:58.278721573Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:42:58.278730578Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:42:58.278738056Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:42:58.278745009Z [err]  
+2025-10-03T17:42:58.278752438Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.391853739Z [inf]  
+2025-10-03T17:45:28.391861609Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.391866927Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.391871948Z [inf]  
+2025-10-03T17:45:28.391878918Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.391883318Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.391887471Z [err]      ^
+2025-10-03T17:45:28.391891498Z [err]  
+2025-10-03T17:45:28.391896325Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.391900497Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.391904622Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.391909161Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.391913965Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.391918925Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.391923472Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.391927745Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.391932367Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.391937125Z [err]  
+2025-10-03T17:45:28.391942580Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.391947969Z [inf]  
+2025-10-03T17:45:28.391952707Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.391957355Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.391962046Z [inf]  
+2025-10-03T17:45:28.391966206Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.391972219Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.391976496Z [err]      ^
+2025-10-03T17:45:28.391980841Z [err]  
+2025-10-03T17:45:28.391985485Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.391990081Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.391995093Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.392000490Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.392005105Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.392009904Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.392014245Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.392018177Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.392022192Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.392026516Z [err]  
+2025-10-03T17:45:28.392030229Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.392034331Z [inf]  
+2025-10-03T17:45:28.392038478Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.392042510Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.392046275Z [inf]  
+2025-10-03T17:45:28.392050625Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.392055182Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.392060760Z [err]      ^
+2025-10-03T17:45:28.392066087Z [err]  
+2025-10-03T17:45:28.392070198Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.392074221Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.392078641Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.392082736Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.392086720Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.392090592Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.392094720Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.392099900Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.392105824Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.392997881Z [err]  
+2025-10-03T17:45:28.393007412Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.393014046Z [inf]  
+2025-10-03T17:45:28.393019591Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.393025455Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.393031684Z [inf]  
+2025-10-03T17:45:28.393037085Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.393042605Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.393048264Z [err]      ^
+2025-10-03T17:45:28.393054374Z [err]  
+2025-10-03T17:45:28.393061085Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.393066314Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.393072500Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.393077880Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.393083214Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.393092389Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.393766565Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.393776398Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.393783620Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.393791000Z [err]  
+2025-10-03T17:45:28.393798719Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.393808453Z [inf]  
+2025-10-03T17:45:28.393816125Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.393823335Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.393830491Z [inf]  
+2025-10-03T17:45:28.393838233Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.393843912Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.393849864Z [err]      ^
+2025-10-03T17:45:28.393857134Z [err]  
+2025-10-03T17:45:28.393862473Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.393867172Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.393872572Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.393877260Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.393881616Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.393886051Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.393891118Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.393896624Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.393901773Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.393906488Z [err]  
+2025-10-03T17:45:28.393911204Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.393915404Z [inf]  
+2025-10-03T17:45:28.393921414Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.393926023Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.393930067Z [inf]  
+2025-10-03T17:45:28.393934365Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.393938924Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.393943835Z [err]      ^
+2025-10-03T17:45:28.393949195Z [err]  
+2025-10-03T17:45:28.393954019Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.393958290Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.393964268Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.393970147Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.393977227Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.393998392Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.394005232Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.394010856Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.394015751Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.394022521Z [err]  
+2025-10-03T17:45:28.394031233Z [err]  Node.js v18.20.8
+2025-10-03T17:45:28.506930676Z [inf]  
+2025-10-03T17:45:28.506937343Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:28.506954163Z [inf]  > node dist/index.js
+2025-10-03T17:45:28.506963543Z [inf]  
+2025-10-03T17:45:28.809397782Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:28.809405341Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:28.809409990Z [err]      ^
+2025-10-03T17:45:28.809417193Z [err]  
+2025-10-03T17:45:28.809425619Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:28.809430649Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:28.809435034Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:28.809439253Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:28.809443136Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:28.809448085Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:28.809452689Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:28.809457913Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:28.809462034Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:28.809466204Z [err]  
+2025-10-03T17:45:28.809470133Z [err]  Node.js v18.20.8
+2025-10-03T17:45:29.831755831Z [inf]  
+2025-10-03T17:45:29.831761242Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:29.831765490Z [inf]  > node dist/index.js
+2025-10-03T17:45:29.831771784Z [inf]  
+2025-10-03T17:45:30.117332104Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:30.117338005Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:30.117343088Z [err]      ^
+2025-10-03T17:45:30.117347439Z [err]  
+2025-10-03T17:45:30.117352177Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:30.117357209Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:30.117362937Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:30.117367850Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:30.117372768Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:30.117378291Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:30.117383776Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:30.117388901Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:30.117394257Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:30.117399097Z [err]  
+2025-10-03T17:45:30.117404559Z [err]  Node.js v18.20.8
+2025-10-03T17:45:31.385765395Z [inf]  
+2025-10-03T17:45:31.385770711Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:31.385776007Z [inf]  > node dist/index.js
+2025-10-03T17:45:31.385782472Z [inf]  
+2025-10-03T17:45:31.645598269Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:31.645603842Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:31.645609086Z [err]      ^
+2025-10-03T17:45:31.645613739Z [err]  
+2025-10-03T17:45:31.645619138Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:31.645624727Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:31.645629526Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:31.645633548Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:31.645638616Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:31.645644989Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:31.645652704Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:31.645660680Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:31.645666400Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:31.645672244Z [err]  
+2025-10-03T17:45:31.645678408Z [err]  Node.js v18.20.8
+2025-10-03T17:45:32.694710723Z [inf]  
+2025-10-03T17:45:32.694719891Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:32.694725916Z [inf]  > node dist/index.js
+2025-10-03T17:45:32.694730150Z [inf]  
+2025-10-03T17:45:32.983390742Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:32.983399635Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:32.983405252Z [err]      ^
+2025-10-03T17:45:32.983411245Z [err]  
+2025-10-03T17:45:32.983416329Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:32.983421068Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:32.983426566Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:32.983433723Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:32.983438090Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:32.983443402Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:32.983449872Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:32.983454108Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:32.983458381Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:32.983461980Z [err]  
+2025-10-03T17:45:32.983467207Z [err]  Node.js v18.20.8
+2025-10-03T17:45:34.029285124Z [inf]  
+2025-10-03T17:45:34.029292221Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:45:34.029296504Z [inf]  > node dist/index.js
+2025-10-03T17:45:34.029301069Z [inf]  
+2025-10-03T17:45:34.318515491Z [err]  /app/node_modules/.prisma/client/default.js:43
+2025-10-03T17:45:34.318522808Z [err]      throw new Error('@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.');
+2025-10-03T17:45:34.318528839Z [err]      ^
+2025-10-03T17:45:34.318533587Z [err]  
+2025-10-03T17:45:34.318537946Z [err]  Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+2025-10-03T17:45:34.318542211Z [err]      at new PrismaClient (/app/node_modules/.prisma/client/default.js:43:11)
+2025-10-03T17:45:34.318547156Z [err]      at Object.<anonymous> (/app/dist/index.js:24:18)
+2025-10-03T17:45:34.318551755Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:45:34.318556768Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:45:34.318561516Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:45:34.318565776Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:45:34.318570294Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:45:34.318574547Z [err]      at node:internal/main/run_main_module:28:49
+2025-10-03T17:45:34.318580318Z [err]  
+2025-10-03T17:45:34.318585526Z [err]  Node.js v18.20.8
+2025-10-03T17:52:44.000000000Z [inf]  Starting Container
+2025-10-03T17:52:45.075459633Z [inf]  
+2025-10-03T17:52:45.075465920Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:45.075470779Z [inf]  > node dist/index.js
+2025-10-03T17:52:45.075476112Z [inf]  
+2025-10-03T17:52:45.075480478Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:45.075484429Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:45.075488666Z [err]              ^
+2025-10-03T17:52:45.075493392Z [err]  
+2025-10-03T17:52:45.075498109Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:45.075502525Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:45.075506696Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:45.075512818Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:45.075518123Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:45.075525477Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:45.075529759Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:45.075533849Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:45.075538181Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:45.075542380Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:45.075547635Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:45.075551901Z [err]    errorInfo: {
+2025-10-03T17:52:45.075556462Z [err]      code: 'app/no-app',
+2025-10-03T17:52:45.075560850Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:45.075572213Z [err]    },
+2025-10-03T17:52:45.075576978Z [err]    codePrefix: 'app'
+2025-10-03T17:52:45.075581159Z [err]  }
+2025-10-03T17:52:45.075585251Z [err]  
+2025-10-03T17:52:45.075589969Z [err]  Node.js v18.20.8
+2025-10-03T17:52:45.075594337Z [err]  npm notice
+2025-10-03T17:52:45.075601547Z [err]  npm notice New major version of npm available! 10.8.2 -> 11.6.1
+2025-10-03T17:52:45.075606650Z [err]  npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.1
+2025-10-03T17:52:45.075613303Z [err]  npm notice To update run: npm install -g npm@11.6.1
+2025-10-03T17:52:45.075619152Z [err]  npm notice
+2025-10-03T17:52:46.149258836Z [inf]  
+2025-10-03T17:52:46.149264583Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:46.149271516Z [inf]  > node dist/index.js
+2025-10-03T17:52:46.149279508Z [inf]  
+2025-10-03T17:52:46.461389182Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:46.461398898Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:46.461405477Z [err]              ^
+2025-10-03T17:52:46.461411354Z [err]  
+2025-10-03T17:52:46.461416528Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:46.461421878Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:46.461428225Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:46.461434088Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:46.461439584Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:46.461445110Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:46.461451692Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:46.461459461Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:46.461465743Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:46.461471375Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:46.461477658Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:46.461483157Z [err]    errorInfo: {
+2025-10-03T17:52:46.461488389Z [err]      code: 'app/no-app',
+2025-10-03T17:52:46.461492870Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:46.461496847Z [err]    },
+2025-10-03T17:52:46.461503491Z [err]    codePrefix: 'app'
+2025-10-03T17:52:46.461508189Z [err]  }
+2025-10-03T17:52:46.461514158Z [err]  
+2025-10-03T17:52:46.461520607Z [err]  Node.js v18.20.8
+2025-10-03T17:52:47.000000000Z [inf]  Stopping Container
+2025-10-03T17:52:47.464931618Z [inf]  
+2025-10-03T17:52:47.464938597Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:47.464944522Z [inf]  > node dist/index.js
+2025-10-03T17:52:47.464949498Z [inf]  
+2025-10-03T17:52:47.807951514Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:47.807960040Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:47.807966183Z [err]              ^
+2025-10-03T17:52:47.807972129Z [err]  
+2025-10-03T17:52:47.807978018Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:47.807983487Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:47.807988630Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:47.807995446Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:47.808000679Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:47.808007669Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:47.808012894Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:47.808017792Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:47.808022635Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:47.808027889Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:47.808034423Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:47.808039223Z [err]    errorInfo: {
+2025-10-03T17:52:47.808044135Z [err]      code: 'app/no-app',
+2025-10-03T17:52:47.808049676Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:47.808054666Z [err]    },
+2025-10-03T17:52:47.808060967Z [err]    codePrefix: 'app'
+2025-10-03T17:52:47.808066807Z [err]  }
+2025-10-03T17:52:47.808073406Z [err]  
+2025-10-03T17:52:47.808078498Z [err]  Node.js v18.20.8
+2025-10-03T17:52:48.831916837Z [inf]  
+2025-10-03T17:52:48.831923527Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:48.831929702Z [inf]  > node dist/index.js
+2025-10-03T17:52:48.831936543Z [inf]  
+2025-10-03T17:52:49.126516048Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:49.126521570Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:49.126527272Z [err]              ^
+2025-10-03T17:52:49.126533232Z [err]  
+2025-10-03T17:52:49.126539222Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:49.126545035Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:49.126551679Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:49.126557479Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:49.126563126Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:49.126570404Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:49.126576394Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:49.126582114Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:49.126587984Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:49.126597290Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:49.126605893Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:49.126611426Z [err]    errorInfo: {
+2025-10-03T17:52:49.126617209Z [err]      code: 'app/no-app',
+2025-10-03T17:52:49.126623327Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:49.126628841Z [err]    },
+2025-10-03T17:52:49.126633675Z [err]    codePrefix: 'app'
+2025-10-03T17:52:49.126639427Z [err]  }
+2025-10-03T17:52:49.126644877Z [err]  
+2025-10-03T17:52:49.126650567Z [err]  Node.js v18.20.8
+2025-10-03T17:52:50.332455195Z [inf]  
+2025-10-03T17:52:50.332459809Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:50.332463721Z [inf]  > node dist/index.js
+2025-10-03T17:52:50.332467978Z [inf]  
+2025-10-03T17:52:50.623802152Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:50.623811557Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:50.623818234Z [err]              ^
+2025-10-03T17:52:50.623825111Z [err]  
+2025-10-03T17:52:50.623831498Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:50.623840222Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:50.623847600Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:50.623854906Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:50.623861273Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:50.623869026Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:50.623882329Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:50.623889630Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:50.623895792Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:50.623901417Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:50.623906866Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:50.623912602Z [err]    errorInfo: {
+2025-10-03T17:52:50.623920037Z [err]      code: 'app/no-app',
+2025-10-03T17:52:50.623926380Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:50.623932440Z [err]    },
+2025-10-03T17:52:50.623938716Z [err]    codePrefix: 'app'
+2025-10-03T17:52:50.623947272Z [err]  }
+2025-10-03T17:52:50.623953322Z [err]  
+2025-10-03T17:52:50.623958965Z [err]  Node.js v18.20.8
+2025-10-03T17:52:51.577842345Z [inf]  
+2025-10-03T17:52:51.577850751Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:51.577857591Z [inf]  > node dist/index.js
+2025-10-03T17:52:51.577862686Z [inf]  
+2025-10-03T17:52:51.874118777Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:51.874125759Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:51.874130865Z [err]              ^
+2025-10-03T17:52:51.874135563Z [err]  
+2025-10-03T17:52:51.874139648Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:51.874143834Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:51.874148140Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:51.874152710Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:51.874157071Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:51.874161305Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:51.874164912Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:51.874169710Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:51.874173595Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:51.874178402Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:51.874182351Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:51.874186201Z [err]    errorInfo: {
+2025-10-03T17:52:51.874190134Z [err]      code: 'app/no-app',
+2025-10-03T17:52:51.874194368Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:51.874199044Z [err]    },
+2025-10-03T17:52:51.874203390Z [err]    codePrefix: 'app'
+2025-10-03T17:52:51.874208150Z [err]  }
+2025-10-03T17:52:51.874212138Z [err]  
+2025-10-03T17:52:51.874215716Z [err]  Node.js v18.20.8
+2025-10-03T17:52:53.096717684Z [inf]  
+2025-10-03T17:52:53.096728431Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:53.096734421Z [inf]  > node dist/index.js
+2025-10-03T17:52:53.096740092Z [inf]  
+2025-10-03T17:52:53.381161349Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:53.381166192Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:53.381171424Z [err]              ^
+2025-10-03T17:52:53.381176305Z [err]  
+2025-10-03T17:52:53.381181348Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:53.381186009Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:53.381191675Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:53.381196472Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:53.381201045Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:53.381206450Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:53.381211377Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:53.381216004Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:53.381221111Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:53.381225416Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:53.381229600Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:53.381234171Z [err]    errorInfo: {
+2025-10-03T17:52:53.381238714Z [err]      code: 'app/no-app',
+2025-10-03T17:52:53.381244265Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:53.381248384Z [err]    },
+2025-10-03T17:52:53.381252334Z [err]    codePrefix: 'app'
+2025-10-03T17:52:53.381257149Z [err]  }
+2025-10-03T17:52:53.381261439Z [err]  
+2025-10-03T17:52:53.381265926Z [err]  Node.js v18.20.8
+2025-10-03T17:52:54.307401645Z [inf]  
+2025-10-03T17:52:54.307406558Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:54.307410721Z [inf]  > node dist/index.js
+2025-10-03T17:52:54.307415066Z [inf]  
+2025-10-03T17:52:54.622538367Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:54.622547556Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:54.622555177Z [err]              ^
+2025-10-03T17:52:54.622561867Z [err]  
+2025-10-03T17:52:54.622570173Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:54.622578512Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:54.622586626Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:54.622593366Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:54.622600259Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:54.622606275Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:54.622613439Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:54.622623430Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:54.622631428Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:54.622639291Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:54.622647916Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:54.622653370Z [err]    errorInfo: {
+2025-10-03T17:52:54.622660428Z [err]      code: 'app/no-app',
+2025-10-03T17:52:54.622667282Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:54.622674191Z [err]    },
+2025-10-03T17:52:54.622680245Z [err]    codePrefix: 'app'
+2025-10-03T17:52:54.622685794Z [err]  }
+2025-10-03T17:52:54.622691555Z [err]  
+2025-10-03T17:52:54.622697892Z [err]  Node.js v18.20.8
+2025-10-03T17:52:55.596827198Z [inf]  
+2025-10-03T17:52:55.596832755Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:55.596837923Z [inf]  > node dist/index.js
+2025-10-03T17:52:55.596845459Z [inf]  
+2025-10-03T17:52:55.897255100Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:55.897260774Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:55.897266833Z [err]              ^
+2025-10-03T17:52:55.897272453Z [err]  
+2025-10-03T17:52:55.897280112Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:55.897286061Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:55.897291337Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:55.897297680Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:55.897302836Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:55.897308210Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:55.897313809Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:55.897319343Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:55.897324554Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:55.897329811Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:55.897334891Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:55.897340891Z [err]    errorInfo: {
+2025-10-03T17:52:55.897346055Z [err]      code: 'app/no-app',
+2025-10-03T17:52:55.897350785Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:55.897356512Z [err]    },
+2025-10-03T17:52:55.897361503Z [err]    codePrefix: 'app'
+2025-10-03T17:52:55.897366412Z [err]  }
+2025-10-03T17:52:55.897371477Z [err]  
+2025-10-03T17:52:55.897376474Z [err]  Node.js v18.20.8
+2025-10-03T17:52:56.913127044Z [inf]  
+2025-10-03T17:52:56.913135024Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:56.913139925Z [inf]  > node dist/index.js
+2025-10-03T17:52:56.913144883Z [inf]  
+2025-10-03T17:52:57.231142433Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:57.231149323Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:57.231153705Z [err]              ^
+2025-10-03T17:52:57.231160045Z [err]  
+2025-10-03T17:52:57.231165337Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:57.231170409Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:57.231174551Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:57.231178831Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:57.231182957Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:57.231197605Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:57.231202661Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:57.231206942Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:57.231212031Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:57.231216260Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:57.231220572Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:57.231225811Z [err]    errorInfo: {
+2025-10-03T17:52:57.231230320Z [err]      code: 'app/no-app',
+2025-10-03T17:52:57.231234140Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:57.231238070Z [err]    },
+2025-10-03T17:52:57.231242084Z [err]    codePrefix: 'app'
+2025-10-03T17:52:57.231246763Z [err]  }
+2025-10-03T17:52:57.231250422Z [err]  
+2025-10-03T17:52:57.231254375Z [err]  Node.js v18.20.8
+2025-10-03T17:52:58.223927418Z [inf]  
+2025-10-03T17:52:58.223931292Z [inf]  > memora-backend@1.0.0 start
+2025-10-03T17:52:58.223935485Z [inf]  > node dist/index.js
+2025-10-03T17:52:58.223940301Z [inf]  
+2025-10-03T17:52:58.581026368Z [err]  /app/node_modules/firebase-admin/lib/app/lifecycle.js:65
+2025-10-03T17:52:58.581040877Z [err]              throw new error_1.FirebaseAppError(error_1.AppErrorCodes.NO_APP, errorMessage);
+2025-10-03T17:52:58.581050744Z [err]              ^
+2025-10-03T17:52:58.581058791Z [err]  
+2025-10-03T17:52:58.581067201Z [err]  FirebaseAppError: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+2025-10-03T17:52:58.581074899Z [err]      at AppStore.getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:65:19)
+2025-10-03T17:52:58.581082909Z [err]      at getApp (/app/node_modules/firebase-admin/lib/app/lifecycle.js:106:36)
+2025-10-03T17:52:58.581093583Z [err]      at getAuth (/app/node_modules/firebase-admin/lib/auth/index.js:50:34)
+2025-10-03T17:52:58.581099212Z [err]      at Object.<anonymous> (/app/dist/index.js:35:35)
+2025-10-03T17:52:58.581106304Z [err]      at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-03T17:52:58.581112411Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-03T17:52:58.581118828Z [err]      at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-03T17:52:58.581124885Z [err]      at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-03T17:52:58.581133330Z [err]      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+2025-10-03T17:52:58.581139564Z [err]      at node:internal/main/run_main_module:28:49 {
+2025-10-03T17:52:58.581145949Z [err]    errorInfo: {
+2025-10-03T17:52:58.581151785Z [err]      code: 'app/no-app',
+2025-10-03T17:52:58.581164618Z [err]      message: 'The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.'
+2025-10-03T17:52:58.581171466Z [err]    },
+2025-10-03T17:52:58.581177213Z [err]    codePrefix: 'app'
+2025-10-03T17:52:58.581183405Z [err]  }
+2025-10-03T17:52:58.581189620Z [err]  
+2025-10-03T17:52:58.581195997Z [err]  Node.js v18.20.8

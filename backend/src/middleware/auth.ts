@@ -15,6 +15,11 @@ export async function authenticateToken(
   next: NextFunction
 ): Promise<void> {
   try {
+    if (!auth) {
+      res.status(500).json({ error: 'Authentication service not available' });
+      return;
+    }
+
     const authHeader = req.headers.authorization;
     const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
 

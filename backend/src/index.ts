@@ -22,17 +22,27 @@ const port = process.env.PORT || 3001;
 export const prisma = new PrismaClient();
 
 // Initialize Firebase Admin
-if (process.env.FIREBASE_PROJECT_ID) {
-  initializeApp({
-    credential: cert({
-      projectId: process.env.FIREBASE_PROJECT_ID,
-      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-      clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    }),
-  });
+let auth: any = null;
+
+if (process.env.FIREBASE_PROJECT_ID && process.env.FIREBASE_PRIVATE_KEY && process.env.FIREBASE_CLIENT_EMAIL) {
+  try {
+    initializeApp({
+      credential: cert({
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+      }),
+    });
+    auth = getAuth();
+    console.log('Firebase Admin initialized successfully');
+  } catch (error) {
+    console.error('Failed to initialize Firebase Admin:', error);
+  }
+} else {
+  console.warn('Firebase Admin not initialized - missing environment variables');
 }
 
-export const auth = getAuth();
+export { auth };
 
 // Middleware
 app.use(helmet());
