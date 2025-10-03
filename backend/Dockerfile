@@ -4,14 +4,14 @@ FROM node:18-slim AS builder
 WORKDIR /app
 
 # Install OpenSSL and other required dependencies for Prisma
-RUN apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y openssl libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # Copy package files
 COPY package*.json ./
 COPY prisma ./prisma/
 
 # Set Prisma engine for Debian Linux
-ENV PRISMA_CLI_BINARY_TARGETS="debian-openssl-1.1.x"
+ENV PRISMA_CLI_BINARY_TARGETS="debian-openssl-3.0.x"
 
 # Install all dependencies (including devDependencies for build)
 RUN npm ci && npm cache clean --force
@@ -32,7 +32,7 @@ RUN npx prisma generate
 FROM node:18-slim AS production
 
 # Install OpenSSL and other required dependencies for Prisma runtime
-RUN apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y openssl libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # Create app directory
 WORKDIR /app

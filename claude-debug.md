@@ -1,26 +1,21 @@
 builder
-RUN apk add --no-cache openssl1.1-compat
+RUN apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*
 1s
-fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
-fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
-ERROR: unable to select packages:
-  openssl1.1-compat (no such package):
-    required by: world[openssl1.1-compat]
-
-production
-RUN apk add --no-cache openssl1.1-compat
-1s
-fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
-fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
-ERROR: unable to select packages:
-  openssl1.1-compat (no such package):
-    required by: world[openssl1.1-compat]
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8791 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [281 kB]
+Fetched 9333 kB in 1s (9086 kB/s)
+Reading package lists...
+Reading package lists...
 Dockerfile:35
 -------------------
 33 |
 34 |     # Install OpenSSL and other required dependencies for Prisma runtime
-35 | >>> RUN apk add --no-cache openssl1.1-compat
+35 | >>> RUN apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*
 36 |
 37 |     # Create app directory
 -------------------
-ERROR: failed to build: failed to solve: process "/bin/sh -c apk add --no-cache openssl1.1-compat" did not complete successfully: exit code: 1
+ERROR: failed to build: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y openssl libssl1.1 && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
