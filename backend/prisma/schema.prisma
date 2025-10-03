@@ -1,0 +1,166 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String @id @default(cuid())
+  name         String
+  email        String @unique
+  avatarUrl    String? @map("avatar_url")
+  authProvider String @map("auth_provider")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  prompts   Prompt[]
+  responses Response[]
+  upvotes   Upvote[]
+  likes     Like[]
+  reports   Report[]
+
+  @@map("users")
+}
+
+model Community {
+  id        String @id @default(cuid())
+  name      String
+  slug      String @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  prompts Prompt[]
+
+  @@map("communities")
+}
+
+model Prompt {
+  id          String     @id @default(cuid())
+  communityId String?    @map("community_id")
+  authorId    String     @map("author_id")
+  title       String
+  body        String?
+  type        PromptType
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+
+  // Relations
+  community   Community?   @relation(fields: [communityId], references: [id])
+  author      User         @relation(fields: [authorId], references: [id])
+  responses   Response[]
+  pollOptions PollOption[]
+  likes       Like[]
+
+  @@map("prompts")
+}
+
+model PollOption {
+  id        String @id @default(cuid())
+  promptId  String @map("prompt_id")
+  text      String
+  voteCount Int    @default(0) @map("vote_count")
+
+  // Relations
+  prompt Prompt @relation(fields: [promptId], references: [id], onDelete: Cascade)
+  votes  PollVote[]
+
+  @@map("poll_options")
+}
+
+model PollVote {
+  id           String @id @default(cuid())
+  userId       String @map("user_id")
+  pollOptionId String @map("poll_option_id")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  // Relations
+  pollOption PollOption @relation(fields: [pollOptionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, pollOptionId])
+  @@map("poll_votes")
+}
+
+model Response {
+  id           String @id @default(cuid())
+  promptId     String @map("prompt_id")
+  parentId     String? @map("parent_id")
+  authorId     String @map("author_id")
+  text         String
+  upvotesCount Int    @default(0) @map("upvotes_count")
+  depth        Int    @default(0)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  prompt  Prompt   @relation(fields: [promptId], references: [id], onDelete: Cascade)
+  parent  Response? @relation("ResponseReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies Response[] @relation("ResponseReplies")
+  author  User     @relation(fields: [authorId], references: [id])
+  upvotes Upvote[]
+
+  @@map("responses")
+}
+
+model Upvote {
+  id         String @id @default(cuid())
+  userId     String @map("user_id")
+  responseId String @map("response_id")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  // Relations
+  user     User     @relation(fields: [userId], references: [id])
+  response Response @relation(fields: [responseId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, responseId])
+  @@map("upvotes")
+}
+
+model Like {
+  id        String @id @default(cuid())
+  userId    String @map("user_id")
+  promptId  String @map("prompt_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  user   User   @relation(fields: [userId], references: [id])
+  prompt Prompt @relation(fields: [promptId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, promptId])
+  @@map("likes")
+}
+
+model Report {
+  id           String       @id @default(cuid())
+  resourceType ResourceType @map("resource_type")
+  resourceId   String       @map("resource_id")
+  reporterId   String       @map("reporter_id")
+  reason       String
+  createdAt    DateTime     @default(now()) @map("created_at")
+
+  // Relations
+  reporter User @relation(fields: [reporterId], references: [id])
+
+  @@map("reports")
+}
+
+enum PromptType {
+  TEXT
+  POLL
+
+  @@map("prompt_type")
+}
+
+enum ResourceType {
+  PROMPT
+  RESPONSE
+
+  @@map("resource_type")
+}
