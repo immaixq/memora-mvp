@@ -38,8 +38,8 @@ RUN apt-get update && apt-get install -y openssl libssl3 ca-certificates && rm -
 WORKDIR /app
 
 # Create a non-root user
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
+RUN groupadd --gid 1001 nodejs
+RUN useradd --uid 1001 --gid nodejs --shell /bin/bash --create-home nextjs
 
 # Copy package files and install only production dependencies
 COPY --chown=nextjs:nodejs package*.json ./
