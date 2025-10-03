@@ -19,6 +19,9 @@ RUN npx prisma generate
 # Build the application
 RUN npm run build
 
+# Generate Prisma client again to ensure it's available in production
+RUN npx prisma generate
+
 # Production stage
 FROM node:18-alpine AS production
 
@@ -36,6 +39,10 @@ RUN npm ci --only=production && npm cache clean --force
 # Copy built application and prisma
 COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist
 COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules/.prisma ./node_modules/.prisma
+
+# Ensure Prisma client is generated for production
+RUN npx prisma generate
 
 # Switch to non-root user
 USER nextjs
