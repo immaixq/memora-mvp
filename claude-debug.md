@@ -1,15 +1,14 @@
-builder
-RUN npm run build
-278ms
-> memora-backend@1.0.0 build
-> tsc
-sh: tsc: not found
-Dockerfile:20
--------------------
-18 |
-19 |     # Build the application
-20 | >>> RUN npm run build
-21 |
-22 |     # Production stage
--------------------
-ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127
+Firebase Admin not initialized - missing environment variables
+prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to "openssl-1.1.x".
+Please manually install OpenSSL and try installing Prisma again.
+Failed to start server: PrismaClientInitializationError: Unable to require(`/app/node_modules/.prisma/client/libquery_engine-linux-musl.so.node`).
+The Prisma engines do not seem to be compatible with your system. Please refer to the documentation about Prisma's system requirements: https://pris.ly/d/system-requirements
+Details: Error loading shared library libssl.so.1.1: No such file or directory (needed by /app/node_modules/.prisma/client/libquery_engine-linux-musl.so.node)
+    at Object.loadLibrary (/app/node_modules/@prisma/client/runtime/library.js:111:10243)
+    at async _r.loadEngine (/app/node_modules/@prisma/client/runtime/library.js:112:448)
+    at async _r.instantiateLibrary (/app/node_modules/@prisma/client/runtime/library.js:111:12599)
+    at async _r.start (/app/node_modules/@prisma/client/runtime/library.js:112:1976)
+    at async startServer (/app/dist/index.js:82:9) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
