@@ -16,7 +16,7 @@ import { errorHandler } from './middleware/errorHandler';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = parseInt(process.env.PORT || '3001');
 
 // Initialize Prisma
 export const prisma = new PrismaClient();
@@ -48,7 +48,7 @@ export { auth };
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-frontend-domain.vercel.app']
+    ? ['https://memora-mvp.vercel.app', 'https://localhost:5173', 'https://localhost:5174'] 
     : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
   credentials: true,
 }));
@@ -89,9 +89,10 @@ async function startServer(): Promise<void> {
     await prisma.$connect();
     console.log('Database connected successfully');
     
-    app.listen(port, () => {
+    app.listen(port, '0.0.0.0', () => {
       console.log(`Server running on port ${port}`);
       console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+      console.log(`Health check available at: http://localhost:${port}/health`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
