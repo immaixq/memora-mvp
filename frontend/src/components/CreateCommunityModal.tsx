@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { X, Users, Hash } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { communitiesApi, CreateCommunityData } from '@/lib/api';
+import { communitiesApi } from '@/lib/api';
 import LoadingSpinner from './LoadingSpinner';
 
 const createCommunitySchema = z.object({

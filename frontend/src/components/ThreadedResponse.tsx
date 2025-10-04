@@ -22,8 +22,8 @@ const ThreadedResponse: React.FC<ThreadedResponseProps> = ({
   const { user } = useAuth();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [showReplyForm, setShowReplyForm] = useState(false);
-  const [isUpvoted, setIsUpvoted] = useState(false);
-  const [upvotesCount, setUpvotesCount] = useState(response.upvotesCount);
+  const [isUpvoted] = useState(false);
+  const [upvotesCount] = useState(response.upvotesCount);
 
   const hasReplies = response.replies && response.replies.length > 0;
   const totalReplies = response.replies?.length || 0;

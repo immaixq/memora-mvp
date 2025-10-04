@@ -1,10 +1,14 @@
-ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
-    at Object.xForwardedForHeader (/app/node_modules/express-rate-limit/dist/index.cjs:185:13)
-    at wrappedValidations.<computed> [as xForwardedForHeader] (/app/node_modules/express-rate-limit/dist/index.cjs:397:22)
-    at Object.keyGenerator (/app/node_modules/express-rate-limit/dist/index.cjs:658:20)
-    at /app/node_modules/express-rate-limit/dist/index.cjs:710:32
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async /app/node_modules/express-rate-limit/dist/index.cjs:691:5 {
-  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
-  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
-}
+vite.svg:1 
+ GET https://memora-frontend-one.vercel.app/vite.svg 404 (Not Found)
+
+memora-frontend-one.vercel.app/:1 Access to XMLHttpRequest at 'https://memora-mvp-production.up.railway.app/api/prompts?sort=recent&page=1&limit=10' from origin 'https://memora-frontend-one.vercel.app' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+Home.tsx:34 Error fetching prompts: 
+ie {message: 'Network Error', name: 'AxiosError', code: 'ERR_NETWORK', config: {…}, request: XMLHttpRequest, …}
+h	@	Home.tsx:34
+await in h		
+(anonymous)	@	Home.tsx:41
+api.ts:88 
+ GET https://memora-mvp-production.up.railway.app/api/prompts?sort=recent&page=1&limit=10 net::ERR_FAILED 200 (OK)
+getPrompts	@	api.ts:88
+h	@	Home.tsx:20
+(anonymous)	@	Home.tsx:41

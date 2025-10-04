@@ -13,15 +13,10 @@ const createMemorySchema = z.object({
   title: z.string().min(1, 'Title is required').max(200, 'Title too long'),
   body: z.string().max(2000, 'Body too long').optional(),
   type: z.enum(['TEXT', 'POLL']),
-  pollOptions: z.array(z.string()).default([]),
+  pollOptions: z.array(z.string()).optional().default([]),
 });
 
-type CreateMemoryFormData = {
-  title: string;
-  body?: string;
-  type: 'TEXT' | 'POLL';
-  pollOptions: string[];
-};
+type CreateMemoryFormData = z.infer<typeof createMemorySchema>;
 
 interface CreateMemoryModalProps {
   isOpen: boolean;
@@ -52,9 +47,9 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
     },
   });
 
-  // @ts-expect-error - Complex form array type issue with react-hook-form
   const { fields, append, remove } = useFieldArray({
     control,
+    // @ts-expect-error - TypeScript path constraint issue with react-hook-form
     name: 'pollOptions',
   });
 
@@ -188,10 +183,10 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
                       Poll Options *
                     </label>
                     <div className="space-y-3">
-                      {fields.map((field, index) => (
+                      {fields.map((field: any, index: number) => (
                         <div key={field.id} className="flex items-center space-x-2">
                           <input
-                            {...register(`pollOptions.${index}`)}
+                            {...register(`pollOptions.${index}` as any)}
                             className="input flex-1"
                             placeholder={`Option ${index + 1}`}
                           />
