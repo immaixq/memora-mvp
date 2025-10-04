@@ -46,6 +46,12 @@ export { auth };
 
 // Middleware
 app.use(helmet());
+
+// Trust proxy for Railway deployment (required for rate limiting)
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
+
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? ['https://memora-mvp.vercel.app', 'https://localhost:5173', 'https://localhost:5174'] 
