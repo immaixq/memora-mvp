@@ -1,5 +1,7 @@
 import React from 'react';
 import { DarkModeContext, useDarkModeLogic } from '@/hooks/useDarkMode';
+// Import to ensure dark mode classes are included in build
+import '@/dark-mode-classes';
 
 interface DarkModeProviderProps {
   children: React.ReactNode;

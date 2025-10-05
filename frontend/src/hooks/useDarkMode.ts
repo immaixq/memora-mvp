@@ -21,18 +21,35 @@ export const useDarkModeLogic = () => {
   const getInitialMode = (): boolean => {
     if (typeof window === 'undefined') return false;
     
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode !== null) {
-      return JSON.parse(savedMode);
+    try {
+      const savedMode = localStorage.getItem('darkMode');
+      if (savedMode !== null) {
+        return JSON.parse(savedMode);
+      }
+      
+      // Check system preference
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch (error) {
+      console.warn('Error accessing localStorage or matchMedia:', error);
+      return false;
     }
-    
-    // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
   };
 
-  const [darkMode, setDarkModeState] = useState<boolean>(getInitialMode);
+  const [darkMode, setDarkModeState] = useState<boolean>(false);
+  const [isInitialized, setIsInitialized] = useState<boolean>(false);
+
+  // Initialize dark mode on client side
+  useEffect(() => {
+    if (!isInitialized) {
+      const initialMode = getInitialMode();
+      setDarkModeState(initialMode);
+      setIsInitialized(true);
+    }
+  }, [isInitialized]);
 
   useEffect(() => {
+    if (!isInitialized) return; // Don't apply until initialized
+    
     const root = window.document.documentElement;
     
     if (darkMode) {
