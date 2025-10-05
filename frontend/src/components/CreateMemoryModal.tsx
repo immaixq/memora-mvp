@@ -95,7 +95,7 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-gray-500 bg-opacity-75"
+              className="fixed inset-0 bg-gray-500 dark:bg-black bg-opacity-75 dark:bg-opacity-50"
               onClick={handleClose}
             />
             
@@ -103,13 +103,13 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative bg-white rounded-xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-hidden"
+              className="relative bg-white dark:bg-[#21262d] rounded-xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-hidden"
             >
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900">Create New Memory</h3>
+              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-[#30363d]">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-[#f0f6fc]">Create New Memory</h3>
                 <button
                   onClick={handleClose}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-gray-400 dark:text-[#7d8590] hover:text-gray-600 dark:hover:text-[#f0f6fc] transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -118,36 +118,36 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
               <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6">
                 {/* Memory Type Selection */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-3">
                     Memory Type
                   </label>
                   <div className="grid grid-cols-2 gap-3">
-                    <label className="flex items-center space-x-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                    <label className="flex items-center space-x-3 p-3 border dark:border-[#30363d] rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-[#30363d] transition-colors">
                       <input
                         {...register('type')}
                         type="radio"
                         value="TEXT"
                         className="text-primary-600 focus:ring-primary-500"
                       />
-                      <MessageSquare className="w-5 h-5 text-gray-500" />
-                      <span className="text-sm font-medium">Text Response</span>
+                      <MessageSquare className="w-5 h-5 text-gray-500 dark:text-[#7d8590]" />
+                      <span className="text-sm font-medium text-gray-900 dark:text-[#f0f6fc]">Text Response</span>
                     </label>
-                    <label className="flex items-center space-x-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                    <label className="flex items-center space-x-3 p-3 border dark:border-[#30363d] rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-[#30363d] transition-colors">
                       <input
                         {...register('type')}
                         type="radio"
                         value="POLL"
                         className="text-primary-600 focus:ring-primary-500"
                       />
-                      <BarChart3 className="w-5 h-5 text-gray-500" />
-                      <span className="text-sm font-medium">Poll</span>
+                      <BarChart3 className="w-5 h-5 text-gray-500 dark:text-[#7d8590]" />
+                      <span className="text-sm font-medium text-gray-900 dark:text-[#f0f6fc]">Poll</span>
                     </label>
                   </div>
                 </div>
 
                 {/* Title */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-2">
                     Title *
                   </label>
                   <input
@@ -162,7 +162,7 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
 
                 {/* Body */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-2">
                     Description (optional)
                   </label>
                   <textarea
@@ -179,7 +179,7 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
                 {/* Poll Options */}
                 {promptType === 'POLL' && (
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-2">
                       Poll Options *
                     </label>
                     <div className="space-y-3">
@@ -194,7 +194,7 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
                             <button
                               type="button"
                               onClick={() => remove(index)}
-                              className="p-2 text-gray-400 hover:text-red-500 transition-colors"
+                              className="p-2 text-gray-400 dark:text-[#7d8590] hover:text-red-500 dark:hover:text-red-400 transition-colors"
                             >
                               <Minus className="w-4 h-4" />
                             </button>
@@ -207,7 +207,7 @@ const CreateMemoryModal: React.FC<CreateMemoryModalProps> = ({
                       <button
                         type="button"
                         onClick={() => append('')}
-                        className="mt-3 flex items-center space-x-2 text-primary-600 hover:text-primary-700 text-sm font-medium"
+                        className="mt-3 flex items-center space-x-2 text-primary-600 dark:text-[#58a6ff] hover:text-primary-700 dark:hover:text-[#79c0ff] text-sm font-medium"
                       >
                         <Plus className="w-4 h-4" />
                         <span>Add option</span>

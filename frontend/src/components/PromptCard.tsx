@@ -8,7 +8,7 @@ import { useAuth } from '@/hooks/useAuth';
 import toast from 'react-hot-toast';
 import PollVoting from './PollVoting';
 import ShareModal from './ShareModal';
-import ChallengeModal from './ChallengeModal';
+import ChallengeSection from './ChallengeSection';
 import DeleteConfirmModal from './DeleteConfirmModal';
 
 interface PromptCardProps {
@@ -24,7 +24,7 @@ const PromptCard: React.FC<PromptCardProps> = ({
 }) => {
   const { user } = useAuth();
   const [showShareModal, setShowShareModal] = useState(false);
-  const [showChallengeModal, setShowChallengeModal] = useState(false);
+  const [showChallengeSection, setShowChallengeSection] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showMenuDropdown, setShowMenuDropdown] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -82,12 +82,13 @@ const PromptCard: React.FC<PromptCardProps> = ({
     user.email.toLowerCase() === prompt.author.email.toLowerCase();
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4, scale: 1.01 }}
-      className="card-playful p-6 group relative overflow-hidden min-h-[240px] flex flex-col"
-    >
+    <div className="space-y-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{ y: -4, scale: 1.01 }}
+        className="card-playful p-6 group relative overflow-hidden min-h-[240px] flex flex-col"
+      >
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-100/30 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-500" />
       
@@ -111,8 +112,8 @@ const PromptCard: React.FC<PromptCardProps> = ({
             </motion.div>
           )}
           <div>
-            <p className="font-semibold text-gray-900">{prompt.author.name}</p>
-            <div className="flex items-center space-x-2 text-xs text-gray-500">
+            <p className="font-semibold text-gray-900 dark:text-[#f0f6fc]">{prompt.author.name}</p>
+            <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-[#7d8590]">
               <span>{formatTimeAgo(prompt.createdAt)}</span>
               {prompt.community && (
                 <>
@@ -175,13 +176,13 @@ const PromptCard: React.FC<PromptCardProps> = ({
 
       {/* Content */}
       <div className="mb-4 flex-grow">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 leading-snug">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-[#f0f6fc] mb-3 line-clamp-2 leading-snug">
           {showFullContent ? (
             prompt.title
           ) : (
             <Link 
               to={`/prompts/${prompt.id}`}
-              className="hover:text-primary-600 transition-colors"
+              className="hover:text-primary-600 dark:hover:text-[#58a6ff] transition-colors"
             >
               {prompt.title}
             </Link>
@@ -228,7 +229,7 @@ const PromptCard: React.FC<PromptCardProps> = ({
           
           {prompt.type === 'POLL' && (
             <motion.div 
-              className="flex items-center space-x-2 text-gray-500"
+              className="flex items-center space-x-2 text-gray-500 dark:text-[#7d8590]"
               whileHover={{ scale: 1.05 }}
             >
               <motion.div
@@ -248,8 +249,8 @@ const PromptCard: React.FC<PromptCardProps> = ({
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => setShowChallengeModal(true)}
-            className="p-3 text-gray-400 hover:text-yellow-500 transition-colors rounded-xl hover:bg-yellow-50 group"
+            onClick={() => setShowChallengeSection(!showChallengeSection)}
+            className={`p-3 transition-colors rounded-xl group ${showChallengeSection ? 'text-yellow-600 bg-yellow-100' : 'text-gray-400 hover:text-yellow-500 hover:bg-yellow-50'}`}
           >
             <motion.div
               whileHover={{ rotate: [0, -15, 15, 0] }}
@@ -321,27 +322,27 @@ const PromptCard: React.FC<PromptCardProps> = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <MessageSquare className="w-4 h-4 text-gray-400" />
+              <MessageSquare className="w-4 h-4 text-gray-400 dark:text-[#7d8590]" />
               <span>{prompt._count.responses} {prompt._count.responses === 1 ? 'response' : 'responses'}</span>
             </motion.div>
           )}
         </div>
         
-        <div className="text-xs text-gray-400">
+        <div className="text-xs text-gray-400 dark:text-[#7d8590]">
           {formatTimeAgo(prompt.createdAt)}
         </div>
       </div>
       </div>
+      </motion.div>
+      
+      {/* Challenge Section - Now prominent and outside card */}
+      {showChallengeSection && (
+        <ChallengeSection prompt={prompt} />
+      )}
       
       <ShareModal
         isOpen={showShareModal}
         onClose={() => setShowShareModal(false)}
-        prompt={prompt}
-      />
-      
-      <ChallengeModal
-        isOpen={showChallengeModal}
-        onClose={() => setShowChallengeModal(false)}
         prompt={prompt}
       />
       
@@ -352,7 +353,7 @@ const PromptCard: React.FC<PromptCardProps> = ({
         isLoading={isDeleting}
         message={`Are you sure you want to delete "${prompt.title}"? This action cannot be undone.`}
       />
-    </motion.div>
+    </div>
   );
 };
 

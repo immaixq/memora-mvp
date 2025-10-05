@@ -73,7 +73,7 @@ const CreateResponseForm: React.FC<CreateResponseFormProps> = ({
       className={compact ? "" : "card p-6"}
     >
       {!compact && (
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-[#f0f6fc] mb-4">
           Add your response
         </h3>
       )}
@@ -83,7 +83,7 @@ const CreateResponseForm: React.FC<CreateResponseFormProps> = ({
           <textarea
             {...register('text')}
             rows={compact ? 2 : 4}
-            className={compact ? "w-full p-2 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm" : "textarea"}
+            className={compact ? "w-full p-2 border border-gray-300 dark:border-[#30363d] dark:bg-[#21262d] dark:text-[#f0f6fc] rounded-lg resize-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-[#58a6ff] focus:border-primary-500 dark:focus:border-[#58a6ff] text-sm" : "textarea"}
             placeholder={placeholder}
           />
           <div className="flex items-center justify-between mt-2">
@@ -94,7 +94,7 @@ const CreateResponseForm: React.FC<CreateResponseFormProps> = ({
             </div>
             <span
               className={`text-sm ${
-                remainingChars < 50 ? 'text-red-500' : 'text-gray-500'
+                remainingChars < 50 ? 'text-red-500 dark:text-red-400' : 'text-gray-500 dark:text-[#7d8590]'
               }`}
             >
               {remainingChars} characters remaining
@@ -107,7 +107,7 @@ const CreateResponseForm: React.FC<CreateResponseFormProps> = ({
             <button
               type="button"
               onClick={onCancel}
-              className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              className="px-3 py-1 text-sm text-gray-600 dark:text-[#7d8590] hover:text-gray-800 dark:hover:text-[#f0f6fc] transition-colors"
             >
               Cancel
             </button>

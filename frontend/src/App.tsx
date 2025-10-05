@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '@/hooks/useAuth';
+import { DarkModeProvider } from '@/components/DarkModeProvider';
 import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import PromptDetail from '@/pages/PromptDetail';
@@ -10,24 +11,26 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 
 function App() {
   return (
-    <AuthProvider>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Layout />
-            </ProtectedRoute>
-          }
-        >
-          <Route index element={<Home />} />
-          <Route path="/prompts/:id" element={<PromptDetail />} />
-          <Route path="/communities" element={<Communities />} />
-          <Route path="/communities/:slug" element={<CommunityDetail />} />
-        </Route>
-      </Routes>
-    </AuthProvider>
+    <DarkModeProvider>
+      <AuthProvider>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Layout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Home />} />
+            <Route path="/prompts/:id" element={<PromptDetail />} />
+            <Route path="/communities" element={<Communities />} />
+            <Route path="/communities/:slug" element={<CommunityDetail />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
+    </DarkModeProvider>
   );
 }
 

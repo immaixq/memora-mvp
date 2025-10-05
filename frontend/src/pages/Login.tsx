@@ -7,12 +7,13 @@ import { z } from 'zod';
 import toast from 'react-hot-toast';
 import { Mail, Lock, Chrome, Sparkles } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-import { signInWithGoogle, signInWithEmail, signUpWithEmail } from '@/lib/firebase';
+import { signInWithGoogle, signInWithEmail, signUpWithEmail, getAuthErrorMessage } from '@/lib/firebase';
 import LoadingSpinner from '@/components/LoadingSpinner';
 
 const loginSchema = z.object({
   email: z.string().email('Please enter a valid email'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
+  displayName: z.string().min(2, 'Name must be at least 2 characters').optional(),
 });
 
 type LoginFormData = z.infer<typeof loginSchema>;
@@ -47,21 +48,11 @@ const Login = () => {
     try {
       console.log('Starting Google sign-in...');
       await signInWithGoogle();
-      toast.success('Welcome to Memora!');
+      toast.success('Welcome to Memora! 🎉');
     } catch (error: any) {
       console.error('Google sign in error:', error);
-      console.error('Error code:', error?.code);
-      console.error('Error message:', error?.message);
-      
-      if (error?.code === 'auth/popup-blocked') {
-        toast.error('Popup blocked. Please allow popups for this site.');
-      } else if (error?.code === 'auth/popup-closed-by-user') {
-        toast.error('Sign-in cancelled.');
-      } else if (error?.code === 'auth/unauthorized-domain') {
-        toast.error('Domain not authorized. Please contact support.');
-      } else {
-        toast.error(`Failed to sign in with Google: ${error?.message || 'Unknown error'}`);
-      }
+      const errorMessage = getAuthErrorMessage(error?.code || '');
+      toast.error(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -71,30 +62,23 @@ const Login = () => {
     setIsLoading(true);
     try {
       if (isSignUp) {
-        await signUpWithEmail(data.email, data.password);
-        toast.success('Account created successfully!');
+        await signUpWithEmail(data.email, data.password, data.displayName);
+        toast.success('Account created successfully! Welcome to Memora! 🎉');
       } else {
         await signInWithEmail(data.email, data.password);
-        toast.success('Welcome back!');
+        toast.success('Welcome back! 👋');
       }
     } catch (error: any) {
       console.error('Email auth error:', error);
-      if (error.code === 'auth/user-not-found') {
-        toast.error('No account found with this email');
-      } else if (error.code === 'auth/wrong-password') {
-        toast.error('Incorrect password');
-      } else if (error.code === 'auth/email-already-in-use') {
-        toast.error('Account already exists with this email');
-      } else {
-        toast.error(isSignUp ? 'Failed to create account' : 'Failed to sign in');
-      }
+      const errorMessage = getAuthErrorMessage(error?.code || '');
+      toast.error(errorMessage);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-purple-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-purple-50 dark:from-[#0d1117] dark:via-[#161b22] dark:to-[#21262d] flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -109,8 +93,8 @@ const Login = () => {
           >
             <Sparkles className="w-8 h-8 text-white" />
           </motion.div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome to Memora</h1>
-          <p className="text-gray-600">Share your favorite places, memories, and connect with your community</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-[#f0f6fc] mb-2">Welcome to Memora</h1>
+          <p className="text-gray-600 dark:text-[#7d8590]">Share your favorite places, memories, and connect with your community</p>
         </div>
 
         <motion.div
@@ -120,8 +104,25 @@ const Login = () => {
           className="card p-8"
         >
           <form onSubmit={handleSubmit(handleEmailAuth)} className="space-y-6">
+            {isSignUp && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-2">
+                  Name
+                </label>
+                <input
+                  {...register('displayName')}
+                  type="text"
+                  className="input"
+                  placeholder="Enter your name"
+                />
+                {errors.displayName && (
+                  <p className="text-red-500 text-sm mt-1">{errors.displayName.message}</p>
+                )}
+              </div>
+            )}
+            
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-2">
                 Email
               </label>
               <div className="relative">
@@ -139,7 +140,7 @@ const Login = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-2">
                 Password
               </label>
               <div className="relative">
@@ -171,10 +172,10 @@ const Login = () => {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
+                <div className="w-full border-t border-gray-300 dark:border-[#30363d]" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                <span className="px-2 bg-white dark:bg-[#21262d] text-gray-500 dark:text-[#7d8590]">Or continue with</span>
               </div>
             </div>
 
@@ -192,7 +193,7 @@ const Login = () => {
             <button
               type="button"
               onClick={() => setIsSignUp(!isSignUp)}
-              className="text-primary-600 hover:text-primary-500 text-sm font-medium"
+              className="text-primary-600 dark:text-[#58a6ff] hover:text-primary-500 dark:hover:text-[#79c0ff] text-sm font-medium"
             >
               {isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Sign up"}
             </button>

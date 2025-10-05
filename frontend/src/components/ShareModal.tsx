@@ -105,7 +105,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, prompt }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-gray-500 bg-opacity-75 backdrop-blur-sm"
+              className="fixed inset-0 bg-gray-500 dark:bg-black bg-opacity-75 dark:bg-opacity-50 backdrop-blur-sm"
               onClick={onClose}
             />
             
@@ -113,21 +113,21 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, prompt }) => {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-white rounded-2xl shadow-playful-lg max-w-md w-full overflow-hidden"
+              className="relative bg-white dark:bg-[#21262d] rounded-2xl shadow-playful-lg max-w-md w-full overflow-hidden"
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-gradient-to-r from-primary-50 to-secondary-50">
+              <div className="flex items-center justify-between p-6 border-b border-gray-100 dark:border-[#30363d] bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-[#161b22] dark:to-[#161b22]">
                 <div className="flex items-center space-x-3">
                   <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl shadow-playful">
                     <LinkIcon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold gradient-text">Share Memory</h3>
+                  <h3 className="text-xl font-bold gradient-text dark:text-[#f0f6fc]">Share Memory</h3>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={onClose}
-                  className="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-white/50"
+                  className="text-gray-400 dark:text-[#7d8590] hover:text-gray-600 dark:hover:text-[#f0f6fc] transition-colors p-1 rounded-lg hover:bg-white/50 dark:hover:bg-[#30363d]/50"
                 >
                   <X className="w-5 h-5" />
                 </motion.button>
@@ -135,12 +135,12 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, prompt }) => {
 
               <div className="p-6">
                 {/* Preview */}
-                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl p-4 mb-6 border-2 border-primary-100">
-                  <h4 className="font-semibold text-gray-900 mb-1">{prompt.title}</h4>
+                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-[#161b22] dark:to-[#161b22] rounded-xl p-4 mb-6 border-2 border-primary-100 dark:border-[#30363d]">
+                  <h4 className="font-semibold text-gray-900 dark:text-[#f0f6fc] mb-1">{prompt.title}</h4>
                   {prompt.body && (
-                    <p className="text-sm text-gray-600 line-clamp-2">{prompt.body}</p>
+                    <p className="text-sm text-gray-600 dark:text-[#7d8590] line-clamp-2">{prompt.body}</p>
                   )}
-                  <div className="flex items-center space-x-2 mt-2 text-xs text-gray-500">
+                  <div className="flex items-center space-x-2 mt-2 text-xs text-gray-500 dark:text-[#7d8590]">
                     <span>by {prompt.author.name}</span>
                     {prompt.community && (
                       <>
@@ -158,8 +158,8 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, prompt }) => {
                   onClick={handleCopyLink}
                   className={`w-full p-4 rounded-xl border-2 border-dashed transition-all duration-200 mb-4 ${
                     copied 
-                      ? 'border-success-300 bg-success-50 text-success-700'
-                      : 'border-gray-300 bg-gray-50 hover:border-primary-300 hover:bg-primary-50 text-gray-700'
+                      ? 'border-success-300 bg-success-50 text-success-700 dark:border-green-500 dark:bg-green-900/20 dark:text-green-400'
+                      : 'border-gray-300 dark:border-[#30363d] bg-gray-50 dark:bg-[#161b22] hover:border-primary-300 dark:hover:border-[#58a6ff] hover:bg-primary-50 dark:hover:bg-[#0d1117] text-gray-700 dark:text-[#f0f6fc]'
                   }`}
                 >
                   <div className="flex items-center justify-center space-x-3">
@@ -177,7 +177,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, prompt }) => {
 
                 {/* Share Options */}
                 <div className="space-y-2">
-                  <h5 className="text-sm font-medium text-gray-700 mb-3">Share to social media</h5>
+                  <h5 className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] mb-3">Share to social media</h5>
                   
                   {shareOptions.map((option, index) => (
                     <motion.button
@@ -209,7 +209,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, prompt }) => {
                   className="mt-6 text-center"
                 >
                   <div className="text-2xl mb-2">✨</div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-[#7d8590]">
                     Help your friends discover their favorite memories too!
                   </p>
                 </motion.div>

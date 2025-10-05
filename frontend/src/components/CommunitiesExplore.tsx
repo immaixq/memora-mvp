@@ -58,7 +58,7 @@ const CommunitiesExplore = () => {
             <Users className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-3xl font-bold gradient-text mb-2">Communities</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+          <p className="text-gray-600 dark:text-[#8b949e] max-w-2xl mx-auto mb-6">
             Join communities of people sharing memories, favorite places, and nostalgic moments. 
             Or create your own community for your group!
           </p>
@@ -86,7 +86,7 @@ const CommunitiesExplore = () => {
           className="mb-8"
         >
           <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-[#7d8590]" />
             <input
               type="text"
               placeholder="Search communities..."
@@ -98,7 +98,7 @@ const CommunitiesExplore = () => {
         </motion.div>
 
         {/* Communities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredCommunities.map((community, index) => (
               <motion.div
@@ -112,47 +112,67 @@ const CommunitiesExplore = () => {
                 <Link to={`/communities/${community.slug}`}>
                   <motion.div
                     whileHover={{ 
-                      scale: 1.02, 
-                      rotateY: 5,
-                      boxShadow: '0 20px 40px rgba(139, 92, 246, 0.15)'
+                      scale: 1.03, 
+                      rotateY: 2,
+                      boxShadow: '0 25px 50px rgba(139, 92, 246, 0.15)'
                     }}
                     whileTap={{ scale: 0.98 }}
-                    className="bg-white rounded-2xl shadow-playful border-2 border-primary-100 p-6 transition-all duration-300 hover:border-primary-300 group relative overflow-hidden"
+                    className="bg-white dark:bg-[#21262d] rounded-3xl shadow-playful border-2 border-primary-100 dark:border-[#30363d] p-8 transition-all duration-300 hover:border-primary-300 dark:hover:border-[#58a6ff] group relative overflow-hidden min-h-[280px] flex flex-col"
                   >
-                    {/* Decorative background elements */}
-                    <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-br from-primary-200/30 to-secondary-200/30 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
-                    <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-gradient-to-br from-accent-200/30 to-success-200/30 rounded-full blur-lg group-hover:scale-125 transition-transform duration-700" />
+                    {/* Enhanced decorative background elements */}
+                    <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-200/40 to-secondary-200/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+                    <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-br from-accent-200/30 to-success-200/30 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700" />
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-yellow-100/20 to-orange-100/20 rounded-full blur-3xl group-hover:rotate-180 transition-transform duration-1000" />
                     
-                    <div className="relative">
-                      <div className="flex items-center space-x-4 mb-4">
+                    <div className="relative flex flex-col h-full">
+                      {/* Header Section */}
+                      <div className="flex flex-col items-center text-center mb-6">
                         <motion.div 
-                          whileHover={{ rotateY: 180, scale: 1.1 }}
-                          transition={{ duration: 0.3 }}
-                          className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl shadow-playful"
+                          whileHover={{ rotateY: 180, scale: 1.15 }}
+                          transition={{ duration: 0.4, type: "spring" }}
+                          className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl shadow-playful mb-4 group-hover:shadow-playful-lg"
                         >
-                          <Users className="w-6 h-6 text-white" />
+                          <Users className="w-8 h-8 text-white" />
                         </motion.div>
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-gray-900 truncate group-hover:text-primary-600 transition-colors">
+                        <div className="w-full">
+                          <h3 className={`font-bold text-gray-900 dark:text-[#f0f6fc] group-hover:text-primary-600 dark:group-hover:text-[#58a6ff] transition-colors leading-tight mb-2 ${
+                            community.name.length > 25 ? 'text-lg' : 
+                            community.name.length > 15 ? 'text-xl' : 'text-2xl'
+                          }`}>
                             {community.name}
                           </h3>
-                          <p className="text-sm text-gray-500">
+                          <p className="text-sm text-gray-500 dark:text-[#7d8590] font-medium bg-gray-50 dark:bg-[#161b22] px-3 py-1 rounded-full inline-block">
                             @{community.slug}
                           </p>
                         </div>
                       </div>
 
-                      <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center space-x-2 text-gray-600">
-                          <TrendingUp className="w-4 h-4" />
-                          <span>
-                            {community._count.prompts} {community._count.prompts === 1 ? 'memory' : 'memories'}
-                          </span>
+                      {/* Stats Section */}
+                      <div className="mt-auto">
+                        <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-[#161b22] dark:to-[#0d1117] rounded-2xl p-4 mb-4">
+                          <div className="flex items-center justify-center space-x-2 text-gray-700 dark:text-[#f0f6fc]">
+                            <TrendingUp className="w-5 h-5 text-primary-500" />
+                            <span className="font-semibold text-lg">
+                              {community._count.prompts}
+                            </span>
+                            <span className="text-sm">
+                              {community._count.prompts === 1 ? 'memory' : 'memories'}
+                            </span>
+                          </div>
                         </div>
                         
-                        <div className="text-primary-600 group-hover:text-primary-700 font-medium">
-                          Explore →
-                        </div>
+                        <motion.div 
+                          whileHover={{ x: 5 }}
+                          className="flex items-center justify-center text-primary-600 dark:text-[#58a6ff] group-hover:text-primary-700 dark:group-hover:text-[#79c0ff] font-bold text-lg"
+                        >
+                          <span>Explore Community</span>
+                          <motion.span
+                            whileHover={{ x: 3 }}
+                            className="ml-2 text-xl"
+                          >
+                            →
+                          </motion.span>
+                        </motion.div>
                       </div>
                     </div>
                   </motion.div>
