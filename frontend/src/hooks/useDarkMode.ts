@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext } from 'react';
+import { useState, useEffect, createContext, useContext, useCallback } from 'react';
 
 type DarkModeContextType = {
   darkMode: boolean;
@@ -18,7 +18,7 @@ export const useDarkMode = () => {
 
 export const useDarkModeLogic = () => {
   // Check for saved preference, then system preference
-  const getInitialMode = (): boolean => {
+  const getInitialMode = useCallback((): boolean => {
     if (typeof window === 'undefined') return false;
     
     try {
@@ -33,7 +33,7 @@ export const useDarkModeLogic = () => {
       console.warn('Error accessing localStorage or matchMedia:', error);
       return false;
     }
-  };
+  }, []);
 
   const [darkMode, setDarkModeState] = useState<boolean>(false);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
@@ -45,7 +45,7 @@ export const useDarkModeLogic = () => {
       setDarkModeState(initialMode);
       setIsInitialized(true);
     }
-  }, [isInitialized]);
+  }, [isInitialized, getInitialMode]);
 
   useEffect(() => {
     if (!isInitialized) return; // Don't apply until initialized
