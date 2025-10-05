@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext, useCallback } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 
 type DarkModeContextType = {
   darkMode: boolean;
@@ -17,8 +17,8 @@ export const useDarkMode = () => {
 };
 
 export const useDarkModeLogic = () => {
-  // Check for saved preference, then system preference
-  const getInitialMode = useCallback((): boolean => {
+  // Initialize dark mode state with lazy initialization
+  const [darkMode, setDarkModeState] = useState<boolean>(() => {
     if (typeof window === 'undefined') return false;
     
     try {
@@ -33,22 +33,11 @@ export const useDarkModeLogic = () => {
       console.warn('Error accessing localStorage or matchMedia:', error);
       return false;
     }
-  }, []);
+  });
 
-  const [darkMode, setDarkModeState] = useState<boolean>(false);
-  const [isInitialized, setIsInitialized] = useState<boolean>(false);
-
-  // Initialize dark mode on client side
+  // Apply dark mode class and save preference
   useEffect(() => {
-    if (!isInitialized) {
-      const initialMode = getInitialMode();
-      setDarkModeState(initialMode);
-      setIsInitialized(true);
-    }
-  }, [isInitialized, getInitialMode]);
-
-  useEffect(() => {
-    if (!isInitialized) return; // Don't apply until initialized
+    if (typeof window === 'undefined') return;
     
     const root = window.document.documentElement;
     
