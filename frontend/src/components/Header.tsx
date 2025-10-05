@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Sparkles, Plus, LogOut, User, Users, Settings, Moon, Sun } from 'lucide-react';
+import { Sparkles, Plus, LogOut, User, Users, Moon, Sun } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { logout } from '@/lib/firebase';
 import toast from 'react-hot-toast';
