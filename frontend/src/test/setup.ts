@@ -1,6 +1,42 @@
+// Polyfill for ArrayBuffer.prototype.resizable and SharedArrayBuffer.prototype.growable
+// Must be first to prevent webidl-conversions errors
+if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.prototype) {
+  if (!Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, 'resizable')) {
+    Object.defineProperty(ArrayBuffer.prototype, 'resizable', {
+      get: function() { return false; },
+      configurable: true,
+      enumerable: false
+    });
+  }
+  if (!Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, 'maxByteLength')) {
+    Object.defineProperty(ArrayBuffer.prototype, 'maxByteLength', {
+      get: function() { return this.byteLength; },
+      configurable: true,
+      enumerable: false
+    });
+  }
+}
+
+if (typeof SharedArrayBuffer !== 'undefined' && SharedArrayBuffer.prototype) {
+  if (!Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, 'growable')) {
+    Object.defineProperty(SharedArrayBuffer.prototype, 'growable', {
+      get: function() { return false; },
+      configurable: true,
+      enumerable: false
+    });
+  }
+  if (!Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, 'maxByteLength')) {
+    Object.defineProperty(SharedArrayBuffer.prototype, 'maxByteLength', {
+      get: function() { return this.byteLength; },
+      configurable: true,
+      enumerable: false
+    });
+  }
+}
+
 import '@testing-library/jest-dom';
 
-// Mock Firebase
+// Mock essential browser APIs
 global.matchMedia = global.matchMedia || function (query) {
   return {
     matches: false,
@@ -14,32 +50,9 @@ global.matchMedia = global.matchMedia || function (query) {
   };
 };
 
-// Mock IntersectionObserver
 global.IntersectionObserver = global.IntersectionObserver || class IntersectionObserver {
   constructor() {}
   observe() {}
   unobserve() {}
   disconnect() {}
 };
-
-// Polyfill for ArrayBuffer.prototype.resizable and SharedArrayBuffer.prototype.growable
-// These are newer features that might not be available in jsdom environment
-if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.prototype) {
-  if (!Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, 'resizable')) {
-    Object.defineProperty(ArrayBuffer.prototype, 'resizable', {
-      get: function() { return false; },
-      configurable: true,
-      enumerable: true
-    });
-  }
-}
-
-if (typeof SharedArrayBuffer !== 'undefined' && SharedArrayBuffer.prototype) {
-  if (!Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, 'growable')) {
-    Object.defineProperty(SharedArrayBuffer.prototype, 'growable', {
-      get: function() { return false; },
-      configurable: true,
-      enumerable: true
-    });
-  }
-}
