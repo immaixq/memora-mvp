@@ -30,7 +30,12 @@ vi.mock('react-hot-toast', () => ({
 
 const renderHeader = () => {
   return render(
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
       <DarkModeProvider>
         <Header />
       </DarkModeProvider>

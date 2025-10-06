@@ -21,3 +21,25 @@ global.IntersectionObserver = global.IntersectionObserver || class IntersectionO
   unobserve() {}
   disconnect() {}
 };
+
+// Polyfill for ArrayBuffer.prototype.resizable and SharedArrayBuffer.prototype.growable
+// These are newer features that might not be available in jsdom environment
+if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.prototype) {
+  if (!Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, 'resizable')) {
+    Object.defineProperty(ArrayBuffer.prototype, 'resizable', {
+      get: function() { return false; },
+      configurable: true,
+      enumerable: true
+    });
+  }
+}
+
+if (typeof SharedArrayBuffer !== 'undefined' && SharedArrayBuffer.prototype) {
+  if (!Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, 'growable')) {
+    Object.defineProperty(SharedArrayBuffer.prototype, 'growable', {
+      get: function() { return false; },
+      configurable: true,
+      enumerable: true
+    });
+  }
+}
