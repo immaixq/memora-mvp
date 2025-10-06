@@ -71,7 +71,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Health check
-app.get('/health', (req, res) => {
+app.get('/health', (_req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
@@ -82,7 +82,7 @@ app.use('/api/reports', reportRoutes);
 app.use('/api/communities', communityRoutes);
 
 // 404 handler
-app.use('*', (req, res) => {
+app.use('*', (_req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });
 });
 

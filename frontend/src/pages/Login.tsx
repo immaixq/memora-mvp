@@ -46,11 +46,9 @@ const Login = () => {
   const handleGoogleSignIn = async () => {
     setIsLoading(true);
     try {
-      console.log('Starting Google sign-in...');
       await signInWithGoogle();
       toast.success('Welcome to Memora! 🎉');
     } catch (error: any) {
-      console.error('Google sign in error:', error);
       const errorMessage = getAuthErrorMessage(error?.code || '');
       toast.error(errorMessage);
     } finally {

@@ -15,7 +15,7 @@ const updateCommunitySchema = z.object({
 });
 
 // Get all communities
-communityRoutes.get('/', async (req, res, next) => {
+communityRoutes.get('/', async (_req, res, next) => {
   try {
     const communities = await prisma.community.findMany({
       orderBy: { createdAt: 'desc' },

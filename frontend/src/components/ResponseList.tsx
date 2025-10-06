@@ -29,9 +29,8 @@ const ResponseList: React.FC<ResponseListProps> = ({ responses, onUpdate }) => {
     }
   };
 
-  const handleReport = (responseId: string) => {
-    // TODO: Implement report functionality
-    console.log('Reporting response:', responseId);
+  const handleReport = () => {
+    // Report functionality to be implemented when API is ready
     toast.success('Report submitted (feature coming soon)');
   };
 
@@ -86,7 +85,7 @@ const ResponseList: React.FC<ResponseListProps> = ({ responses, onUpdate }) => {
               </div>
 
               <button
-                onClick={() => handleReport(response.id)}
+                onClick={() => handleReport()}
                 className="p-1 text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <Flag className="w-4 h-4" />

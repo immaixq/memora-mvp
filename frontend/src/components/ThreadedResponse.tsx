@@ -32,9 +32,12 @@ const ThreadedResponse: React.FC<ThreadedResponseProps> = ({
   const visualDepth = Math.min(depth, 6);
   const indentWidth = visualDepth * 24; // 24px per level
 
+  const onUpvote = () => {
+    // Upvote functionality to be implemented when API is ready
+  };
+
   const handleUpvote = async () => {
-    // TODO: Implement upvote functionality
-    console.log('Upvote response:', response.id);
+    onUpvote();
   };
 
   const handleReplySuccess = () => {

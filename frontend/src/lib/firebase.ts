@@ -10,13 +10,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Debug logging
-console.log('Firebase Config:', {
-  apiKey: firebaseConfig.apiKey ? 'Set' : 'Missing',
-  authDomain: firebaseConfig.authDomain,
-  projectId: firebaseConfig.projectId,
-});
-
 // Validate required config
 if (!firebaseConfig.apiKey || !firebaseConfig.authDomain || !firebaseConfig.projectId) {
   console.error('Missing required Firebase configuration. Please check your .env file.');
@@ -36,36 +29,24 @@ auth.useDeviceLanguage();
 
 // Enhanced auth functions with better error handling
 export const signInWithGoogle = async () => {
-  try {
-    const result = await signInWithPopup(auth, googleProvider);
-    console.log('Google sign-in successful:', result.user.email);
-    return result;
-  } catch (error: any) {
-    console.error('Google sign-in error:', error);
-    throw error;
-  }
+  const result = await signInWithPopup(auth, googleProvider);
+  return result;
 };
 
 export const signInWithEmail = (email: string, password: string) => 
   signInWithEmailAndPassword(auth, email, password);
 
 export const signUpWithEmail = async (email: string, password: string, displayName?: string) => {
-  try {
-    const result = await createUserWithEmailAndPassword(auth, email, password);
-    
-    // Update user profile with display name if provided
-    if (displayName && result.user) {
-      await updateProfile(result.user, {
-        displayName: displayName
-      });
-    }
-    
-    console.log('Email sign-up successful:', result.user.email);
-    return result;
-  } catch (error: any) {
-    console.error('Email sign-up error:', error);
-    throw error;
+  const result = await createUserWithEmailAndPassword(auth, email, password);
+  
+  // Update user profile with display name if provided
+  if (displayName && result.user) {
+    await updateProfile(result.user, {
+      displayName: displayName
+    });
   }
+  
+  return result;
 };
 
 export const logout = () => signOut(auth);
