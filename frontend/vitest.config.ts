@@ -7,7 +7,7 @@ export default mergeConfig(
     test: {
       environment: 'jsdom',
       globals: true,
-      setupFiles: ['./src/test/setup.ts'],
+      setupFiles: ['./src/test/polyfills.ts', './src/test/setup.ts'],
       pool: 'forks',
       poolOptions: {
         forks: {
